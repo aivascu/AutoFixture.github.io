@@ -111,6 +111,18 @@ IEnumerable<int> fiveNumbers = fixture.CreateMany<int>(count: 5);
 
 If you write a test where the number of items does matter, it's always better to be explicit and use the `CreateMany<T>()` method.
 
+### AddManyTo&lt;T&gt;()
+
+Additionally AutoFixture offers several convenience extension methods that help adding multiple elements to an existing collection.
+
+```c#
+var myCollection = new List<int>();
+fixture.AddManyTo(myCollection);
+fixture.AddManyTo(myCollection, repeatCount: 5);
+int count = 0;
+fixture.AddManyTo(myCollection, () => ++count);
+```
+
 ## Summary
 
 Usually AutoFixture tries to return the most expected value you might want to get. For instance, we try to avoid return of exceptional values as usually your code doesn't expect that:

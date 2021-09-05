@@ -14,3 +14,18 @@
 nav.pagination {
   display: none;
 }
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+ul:not(nav__items) {
+  font-size: smaller;
+}
+
+ul:not(nav__items) li {
+  margin: auto;
+}

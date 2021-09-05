@@ -79,7 +79,7 @@ class DomainCustomization : CompositeCustomization
 
 The `Fixture` class is a specialization that packages the components of the kernel in a very specific way to implement the features and behavior of AutoFixture as shown on this illustration:
 
-![High Level Layout](assets/images/high-level-layout.png)
+<img src="../../assets/images/high-level-layout.png" class="center" />
 
 When you create a `Fixture` instance using the default constructor it prepares a set of Specimen Builders called the *engine parts*, corresponding to the middle block of the illustration. These Specimen Builders contain logic that handles well-known primitive types such as integers and strings, as well as a set of components that use Reflection to instantiate complex types via their constructors.
 
